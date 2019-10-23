@@ -15,7 +15,7 @@ function getContent(ScaleId)
     $.ajax(
         {
             type: 'GET',
-            url: 'http://localhost:9102/music/lyric',
+            url: '/music/lyric',
             data: queryString,
             success: function(data){
                 // put result data into "obj"

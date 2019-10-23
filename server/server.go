@@ -46,7 +46,8 @@ func main() {
 
 	log.Printf("Listen on %s...", addr)
 
-	http.HandleFunc("/music/lyric", lyricSentence)
+	http.Handle("/music/lyric", http.HandlerFunc(lyricSentence))
+	http.Handle("/",http.FileServer(http.Dir("./client")))
 
 	log.Fatal(http.ListenAndServe(addr, nil))
 }

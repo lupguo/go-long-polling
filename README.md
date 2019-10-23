@@ -31,6 +31,11 @@ $ go run ./server/server.go -filename ./data.txt
 ```
 
 ### Client
+While having the index.html opened in your browser, each lyric request on one tcp connect(keepalive), long polling request the
+lyric sentence.
+
+You will see the interval specified time, will get the latest lyrics from the server!
+
 ```
 Music Lyric:
 By Terry Rod
@@ -49,14 +54,13 @@ By Terry Rod
 ...
 ```
 
-While having the index.html opened in your browser, each lyric request on one tcp connect(keepalive), long polling request the
-lyric sentence.
-
 ## This is just a simple example
 
 ### More about long polling
+
 - https://stackshare.io/ablyrealtime/websockets-vs-long-polling
 - https://github.com/jcuga/golongpoll?ref=stackshare
+- Search HTTP/1.1 Pipeline, KeepAlive, HTTP/2 protocol
 
 ### About net/http handle flow
 <img src="./go-net-http.png" width="1200">
