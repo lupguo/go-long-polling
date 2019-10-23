@@ -21,7 +21,7 @@ function getContent(ScaleId)
                 // put result data into "obj"
                 var obj = jQuery.parseJSON(data);
                 // put the data_from_file into #response
-                $('#response').append("<p>"+obj.Text+"</p>");
+                $('#response').append("<p>["+obj.Scale+"] "+obj.Text+"</p>");
                 // call the function again, this time with the timestamp we just got from server.php
                 getContent(obj.ScaleId);
             }
