@@ -22,6 +22,8 @@ only one request (per user), but the request keeps a permanent connection betwee
 
 ### Run Golang lyric Web Server
 ```
+$ git clone https://github.com/tkstorm/go-long-polling.git
+$ cd go-long-polling/
 $ go run ./server/server.go -filename ./data.txt
 2019/10/23 18:22:08 Listen on :9102...
 2019/10/23 18:22:10 request count: 1
@@ -38,19 +40,23 @@ You will see the interval specified time, will get the latest lyrics from the se
 
 ```
 Music Lyric:
-By Terry Rod
+[00:00.00] By Terry Rod
 
-新的心跳-G.E.M.邓紫棋
+[00:00.21] 新的心跳-G.E.M.邓紫棋
 
-(真人秀《极速前进第二季》主题曲)
+[00:00.99] (真人秀《极速前进第二季》主题曲)
 
-词：G.E.M.邓紫棋
+[00:01.54] 词：G.E.M.邓紫棋
 
-曲：G.E.M.邓紫棋
+[00:02.13] 曲：G.E.M.邓紫棋
 
-也许你看过太多悲剧
+[00:03.26]
 
-也受过太多委屈
+[00:04.20] 也许你看过太多悲剧
+
+[00:10.50] 也受过太多委屈
+
+[00:14.07] 你怕不愿回首的过去
 ...
 ```
 
